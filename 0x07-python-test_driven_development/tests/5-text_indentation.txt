@@ -1,0 +1,65 @@
+The ``5-text_indentation`` module
+======================
+
+Using `text_indentation``
+-------------------
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+
+>>> text_indentation("")
+
+>>> text_indentation("Hello world.")
+Hello world.
+<BLANKLINE>
+
+>>> text_indentation("This is a sentence with multiple periods and some questions? And colons: here and there.")
+This is a sentence with multiple periods and some questions?
+<BLANKLINE>
+And colons:
+<BLANKLINE>
+here and there.
+<BLANKLINE>
+
+>>> text_indentation("NoNewLinesHere")
+NoNewLinesHere
+
+>>> text_indentation("This is a sentence with a period at the end.")
+This is a sentence with a period at the end.
+<BLANKLINE>
+
+
+>>> text_indentation("A question here? And another question here?")
+A question here?
+<BLANKLINE>
+And another question here?
+<BLANKLINE>
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(True)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(["Hello", "world"])
+Traceback (most recent call last):
+TypeError: text must be a string
+
+>>> text_indentation(7)
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+>>> text_indentation({"one": 1, "two": 2})
+Traceback (most recent call last):
+TypeError: text must be a string
+
+
+>>> text_indentation(None)
+Traceback (most recent call last):
+TypeError: text must be a string

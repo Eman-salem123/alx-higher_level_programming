@@ -1,0 +1,50 @@
+The ``3-say_my_name`` module
+======================
+
+Using ``say_my_name``
+-------------------
+
+Importing function from module:
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+Checking for module docstring:
+    >>> n = __import__("3-say_my_name").__doc__
+    >>> len(n) > 1
+    True
+
+Checking for function docstring:
+    >>> m = __import__("3-say_my_name").say_my_name.__doc__
+    >>> len(m) > 1
+    True
+
+test1:
+    >>> say_my_name("tony")
+    My name is tony 
+
+test2:
+    >>> say_my_name()
+    Traceback (most recent call last):
+    ....
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+test3:
+    >>> say_my_name(11,12)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+test4:
+    >>> say_my_name("tony", 11)
+    Traceback (most recent call last):
+    ....
+    TypeError: last_name must be a string
+
+test5:
+    >>> say_my_name(tony, magdy)
+    Traceback (most recent call last):
+    ....
+    NameError: name 'tony' is not defined
+
+test6:
+    >>> say_my_name("tony", "11")
+    My name is tony 11
